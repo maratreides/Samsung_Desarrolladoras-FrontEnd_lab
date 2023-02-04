@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" type="text/javascript"></script>
+    <title>Samsung Desarroladoras - Front-End lab</title> <!Esto es lo que saldrá como nombre de la pestaña del navegador>
+</head>
+
+<body>
+    <div class="form_container">
+    <form name="createaccount">
+
+        <h1> Create Account </h1>  <! Título, saldrá más grande (gracias a css será bonito)>
+
+        <br></br>
+
+        <div class="field_container">
+            <p>Nombre</p>
+            <input type="text" name="name" value="" id="name" class="form_element"> <! Creación del nombre, sus criterios serán establecidos con Java>
+            <span id="name_error"></span>
+        </div>
+
+
+        <div class="field_container">
+            <p>Email</p>
+            <input type="email" name="email" value="" id="email" class="form_element"> <! El tipo de este contenedor ya establece parte de sus criterios>
+            <span id="email_error"></span>
+        </div>
+
+
+        <div class="field_container">
+            <p>Clave</p> 
+            <input type="password" name="password" value="" id="password" class="form_element"> <! Se obvia el maxlenght para introducirlo en java>
+            <span id="password_error"></span>
+        </div>
+
+
+        <div class="field_container">
+            <p>Confirme su clave</p> 
+            <input type="password" name="confirm" value="" id="confirm" class="form_element">
+            <span id="confirm_error"></span>
+        </div>
+
+
+        <input type="submit" value="ENVIAR" id="button" 
+                onclick="return validateName(), validateEmail(), validatePassword(), validateConfirm()" 
+                onmouseover="borderButton()"/> <! Este espaciado es innecesario, pero lo coloco para facilitar la lectura>
+    </form>
+    </div>
+</body>
+</html>
